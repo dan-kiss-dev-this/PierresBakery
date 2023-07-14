@@ -18,6 +18,14 @@ namespace CSharpBakeryCalculator.Tests
         }
 
         [TestMethod]
+        public void LoafsOfBread_SetLoafsOfBread_Int()
+        {
+            Bread newBread = new Bread(1);
+            int expectedValue = 1;
+            Assert.AreEqual(expectedValue, newBread.LoafsOfBread);
+        }
+
+        [TestMethod]
         public void BreadOrderPrice_CalculateCostForPiecesOfBread_int()
         {
             Bread breadOrder = new Bread(7);
