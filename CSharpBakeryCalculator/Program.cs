@@ -7,7 +7,7 @@ namespace CSharpBakeryCalculator
     {
         static void Main()
         {
-            Console.WriteLine("Welcome to The Bakery");
+            Console.WriteLine("Welcome to Pierre's Bakery");
             Console.WriteLine("We have bread and pastries available");
             Console.WriteLine("Bread is $5 a loaf with a promotion of buy 2 get 1 free for unlimited quantity");
             Console.WriteLine("A Pastry is $2 a loaf with a promotion of buy 3 get 1 free for unlimited quantity");
