@@ -26,11 +26,10 @@ namespace CSharpBakeryCalculator.Tests
         }
 
         [TestMethod]
-        public void BreadOrderPrice_CalculateCostForPiecesOfBread_int()
+        public void FinalPrice_CalculateCostForPiecesOfBread_int()
         {
             Bread breadOrder = new Bread(7);
             int expectedOrderCost = 25;
-            // need method to calculate set price
             Assert.AreEqual(expectedOrderCost, breadOrder.FinalPrice);
         }
     }
