@@ -14,7 +14,7 @@ namespace CSharpBakeryCalculator.Models
             CalculateOrderPrice();
         }
 
-        private void CalculateOrderPrice()
+        public int CalculateOrderPrice()
         {
             int PriceForOne = 5;
             int fullPrice = LoafsOfBread * PriceForOne;
@@ -23,6 +23,7 @@ namespace CSharpBakeryCalculator.Models
             int freeUnits = Convert.ToInt32(Math.Floor((double)LoafsOfBread / OnePerXFree));
             int discount = freeUnits * PriceForOne;
             FinalPrice = fullPrice - discount;
+            return FinalPrice;
         }
     }
 }

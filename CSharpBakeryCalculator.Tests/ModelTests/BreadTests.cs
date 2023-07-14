@@ -32,5 +32,17 @@ namespace CSharpBakeryCalculator.Tests
             int expectedOrderCost = 25;
             Assert.AreEqual(expectedOrderCost, breadOrder.FinalPrice);
         }
+
+        [TestMethod]
+        public void CalculateOrderPrice_GetPriceForBreadOrdered_Int()
+        {
+            // Pastry pastryOrder = new Pastry(9);
+            // int expectedOrderCost = 14;
+            // Assert.AreEqual(expectedOrderCost, pastryOrder.CalculateOrderPrice());
+            Bread breadOrder = new Bread(7);
+            int expectedOrderCost = 25;
+            Assert.AreEqual(expectedOrderCost, breadOrder.CalculateOrderPrice());
+        }
+
     }
 }
