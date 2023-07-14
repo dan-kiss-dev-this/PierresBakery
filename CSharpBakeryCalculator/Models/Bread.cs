@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace CSharpBakeryCalculator.Models
 {
@@ -8,11 +9,27 @@ namespace CSharpBakeryCalculator.Models
         public int FinalPrice { get; set; }
 
         public int Discount { get; set; }
-      
+
+        private static List<Bread> _instances = new List<Bread> { };
+
+        public static List<Bread> GetAll()
+        {
+            return _instances;
+        }
+
+        public static void ClearAll()
+        {
+            _instances.Clear();
+        }
+
         public Bread(int units)
         {
             LoafsOfBread = units;
             CalculateOrderPrice();
+            if (units > 0)
+            {
+                _instances.Add(this);
+            }
         }
 
         public int CalculateOrderPrice()

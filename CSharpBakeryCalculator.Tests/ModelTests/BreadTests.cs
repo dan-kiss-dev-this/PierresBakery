@@ -7,9 +7,14 @@ namespace CSharpBakeryCalculator.Tests
 {
     [TestClass]
 
-    public class BreadTests
+    public class BreadTests : IDisposable
     // naming convention public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
     {
+        public void Dispose()
+        {
+            Bread.ClearAll();
+        }
+
         [TestMethod]
         public void BreadConstrutor_CreateInstanceOfBread_Bread()
         {
@@ -47,6 +52,26 @@ namespace CSharpBakeryCalculator.Tests
             Bread breadOrder = new Bread(7);
             int expectedDiscount = 10;
             Assert.AreEqual(expectedDiscount, breadOrder.Discount);
+        }
+
+        [TestMethod]
+        public void GetAll_ReturnsInstances_List()
+        {
+            Bread breadOrder1 = new Bread(1);
+            Bread breadOrder2 = new Bread(2);
+            List<Bread> expectedList = new List<Bread> { breadOrder1, breadOrder2 };
+            List<Bread> instances = Bread.GetAll();
+            CollectionAssert.AreEqual(expectedList, instances);
+        }
+
+        [TestMethod]
+        public void GetAll_MakesInstancesOnlyIfObjectOrdered_List()
+        {
+            // units is zero for breadOrder0 so instance of order is not stored
+            Bread breadOrder0 = new Bread(0);
+            List<Bread> expectedList = new List<Bread> { };
+            List<Bread> instances = Bread.GetAll();
+            CollectionAssert.AreEqual(expectedList, instances);
         }
 
     }
