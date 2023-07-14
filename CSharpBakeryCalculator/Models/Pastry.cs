@@ -12,7 +12,7 @@ namespace CSharpBakeryCalculator.Models
             CalculateOrderPrice();
         }
 
-        private void CalculateOrderPrice()
+        public int CalculateOrderPrice()
         {
             int PriceForOne = 2;
             int fullPrice = UnitsOfPastry * PriceForOne;
@@ -21,6 +21,7 @@ namespace CSharpBakeryCalculator.Models
             int freeUnits = Convert.ToInt32(Math.Floor((double)UnitsOfPastry / OnePerXFree));
             int discount = freeUnits * PriceForOne;
             FinalPrice = fullPrice - discount;
+            return FinalPrice;
         }
 
     }
