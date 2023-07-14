@@ -8,6 +8,7 @@ namespace CSharpBakeryCalculator
         static void Main()
         {
             Console.ForegroundColor = ConsoleColor.Green;
+            Console.BackgroundColor = ConsoleColor.Black;
             Console.WriteLine(@"
                 _______ _________ _______  _______  _______  _______  _  _______    ______   _______  _        _______  _______          
                 (  ____ )\__   __/(  ____ \(  ____ )(  ____ )(  ____ \( )(  ____ \  (  ___ \ (  ___  )| \    /\(  ____ \(  ____ )|\     /|
