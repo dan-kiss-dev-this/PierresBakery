@@ -2,6 +2,10 @@ namespace CSharpBakeryCalculator.Models
 {
     public class Pastry
     {
-        //add code
+        public int UnitsOfPastry { get; set;}
+        public Pastry(int numberOfPastry)
+        {
+            UnitsOfPastry = numberOfPastry;
+        }
     }
 }
