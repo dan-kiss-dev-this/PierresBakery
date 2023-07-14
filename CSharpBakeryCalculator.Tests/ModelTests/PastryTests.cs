@@ -40,5 +40,14 @@ namespace CSharpBakeryCalculator.Tests
             Assert.AreEqual(expectedOrderCost, pastryOrder.CalculateOrderPrice());
         }
 
+        [TestMethod]
+        public void Discount_GetDiscount_Int()
+        {
+            Pastry pastryOrder = new Pastry(7);
+            int expectedDiscount = 2;
+            Assert.AreEqual(expectedDiscount, pastryOrder.Discount);
+        }
+
+
     }
 }

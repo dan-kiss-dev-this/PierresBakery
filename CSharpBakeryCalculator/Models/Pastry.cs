@@ -6,6 +6,8 @@ namespace CSharpBakeryCalculator.Models
     {
         public int UnitsOfPastry { get; set; }
         public int FinalPrice { get; set; }
+
+        public int Discount { get; set; }
         public Pastry(int numberOfPastry)
         {
             UnitsOfPastry = numberOfPastry;
@@ -19,8 +21,8 @@ namespace CSharpBakeryCalculator.Models
             // promo buy 3 get 1 free
             int OnePerXFree = 4;
             int freeUnits = Convert.ToInt32(Math.Floor((double)UnitsOfPastry / OnePerXFree));
-            int discount = freeUnits * PriceForOne;
-            FinalPrice = fullPrice - discount;
+            Discount = freeUnits * PriceForOne;
+            FinalPrice = fullPrice - Discount;
             return FinalPrice;
         }
 
