@@ -18,8 +18,9 @@ namespace CSharpBakeryCalculator.Models
         {
             int PriceForOne = 5;
             int fullPrice = LoafsOfBread * PriceForOne;
-            // promo buy 2 get 1 free
-            int freeUnits = Convert.ToInt32(Math.Floor((double)LoafsOfBread / 3));
+            // promo buy 2 get 1 free, so one per 3 free
+            int OnePerXFree = 3;
+            int freeUnits = Convert.ToInt32(Math.Floor((double)LoafsOfBread / OnePerXFree));
             int discount = freeUnits * PriceForOne;
             FinalPrice = fullPrice - discount;
         }
