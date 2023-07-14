@@ -7,6 +7,17 @@ namespace CSharpBakeryCalculator
     {
         static void Main()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(@"
+                _______ _________ _______  _______  _______  _______  _  _______    ______   _______  _        _______  _______          
+                (  ____ )\__   __/(  ____ \(  ____ )(  ____ )(  ____ \( )(  ____ \  (  ___ \ (  ___  )| \    /\(  ____ \(  ____ )|\     /|
+                | (    )|   ) (   | (    \/| (    )|| (    )|| (    \/|/ | (    \/  | (   ) )| (   ) ||  \  / /| (    \/| (    )|( \   / )
+                | (____)|   | |   | (__    | (____)|| (____)|| (__       | (_____   | (__/ / | (___) ||  (_/ / | (__    | (____)| \ (_) / 
+                |  _____)   | |   |  __)   |     __)|     __)|  __)      (_____  )  |  __ (  |  ___  ||   _ (  |  __)   |     __)  \   /  
+                | (         | |   | (      | (\ (   | (\ (   | (               ) |  | (  \ \ | (   ) ||  ( \ \ | (      | (\ (      ) (   
+                | )      ___) (___| (____/\| ) \ \__| ) \ \__| (____/\   /\____) |  | )___) )| )   ( ||  /  \ \| (____/\| ) \ \__   | |   
+                |/       \_______/(_______/|/   \__/|/   \__/(_______/   \_______)  |/ \___/ |/     \||_/    \/(_______/|/   \__/   \_/   
+            ");
             Console.WriteLine("Welcome to Pierre's Bakery");
             Console.WriteLine("We have bread and pastries available");
             Console.WriteLine("Bread is $5 a loaf with a promotion of buy 2 get 1 free for unlimited quantity");
