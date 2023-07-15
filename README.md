@@ -2,6 +2,7 @@
 
 #### By _**{Dan Kiss}**_
 
+![Console App](./CSharpBakeryCalculator/Screenshots/Pierre's%20Bakery.png)
 #### _{Pierre's Bakery is a C# console app where the user will specify how many Bread and Pastry objects they want and the cost is calculated for the user.}_
 
 ## Technologies Used
